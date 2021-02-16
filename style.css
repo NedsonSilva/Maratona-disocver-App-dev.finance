@@ -1,0 +1,101 @@
+:root {
+  --dark-blue: #363f5f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F0F2F5;
+}
+
+/* |||||||    HEADER     |||||||||| */
+header {
+  background: #2D4A22;
+  padding: 2rem 0 10rem;
+  text-align: center;
+}
+
+#logo {
+  color: #FFF;
+  font-weight: 100;
+}
+
+/* |||||||   BALANCE   ||||||||| */
+main {
+  width: min(80vw, 600px);
+  margin: auto;
+}
+
+#balance { margin-top: -8rem; }
+
+#balance h2 { color: #FFF; font-weight: 400;  }
+
+/* |||||||   CARDS    ||||||| */
+.cards {
+  background: #FFF;
+  border-radius: 5px;
+  margin: 30px 0;
+  height: 20%;
+  padding: 10px 20px;
+  line-height: 50px;
+  font-weight: 400;
+  color: var(--dark-blue)
+}
+.cards h3 { font-weight: 300; }
+
+.cards p {font-size: 2em;}
+
+.cards:last-of-type {
+  background: #49AA26;
+  color: #FFF;
+}
+
+/* ||||||   TRANSACTION   ||||||||| */
+#transaction h2 {
+  color: var(--dark-blue);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* ||||||||   DATA TABLE    |||||||| */
+
+#data_table {
+  width: 100%;
+  border-spacing: 0 10px;
+}
+
+table th, table td {
+  padding: 3% 0 3% 6%;
+  background: #E8E9EA;
+  text-align: left;
+  font-weight: 400;
+  color: var(--dark-blue);
+}
+
+table th {
+  background: #FFF;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.values { color: rgb(221, 0, 0); }
+
+.values.positive { color: #12A454 }
+
+/* |||||   FOOTER    ||||| */
+
+footer {
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 30px;
+  color: var(--dark-blue)
+}
