@@ -11,31 +11,47 @@
 </head>
 <body>
   <header>
-    <h1 id="logo">dev.finance$</h1>
+    <h1 id="logo">
+      <img src="assets/logo.svg" alt="dev.finance$">
+    </h1>
   </header>
 
   <main>
     <section id="balance">
-      <h2>Balanço</h2>
+      <!-- <h2>Balanço</h2> -->
 
       <div class="cards">
-        <h3>Entradas</h3>
-        <p>R$ 5.000,00</p>
+        <h3>
+          <span>Entradas</span>
+          <img src="assets/income.svg" alt="entradas">
+        </h3>
+
+        <p id="entradasDisplay">R$ 0,00</p>
       </div>
 
       <div class="cards">
-        <h3>Saídas</h3>
-        <p>R$ 2.000,00</p>
+        <h3>
+          <span>Saídas</span>
+          <img src="assets/expense.svg" alt="saídas">
+        </h3>
+
+        <p id="saidasDisplay">R$ 0,00</p>
       </div>
 
       <div class="cards">
-        <h3>Total</h3>
-        <p>R$ 3.000,00</p>
+        <h3>
+          <span>Total</span>
+          <img src="assets/total.svg" alt="total">
+        </h3>
+
+        <p id="totalDisplay">R$ 0,00</p>
       </div>
     </section>
 
     <section id="transaction">
       <h2>Transações</h2>
+
+      <p id="new">+ nova transação</p>
 
       <table id="data_table">
         <thead>
@@ -43,28 +59,45 @@
             <th>Descrição</th>
             <th>Valor</th>
             <th>Data</th>
+            <th>Remover</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Luz</td>
-            <td class="values">- R$ 500,00</td>
-            <td>23/01/2021</td>
-          </tr>
-          <tr>
-            <td>Criação de Website</td>
-            <td class="values positive">R$ 5.000,00</td>
-            <td>24/01/2021</td>
-          </tr>
-          <tr>
-            <td>Aluguel</td>
-            <td class="values">- R$ 1.500,00</td>
-            <td>26/01/2021</td>
-          </tr>
+
         </tbody>
       </table>
     </section>
   </main>
+  <aside class="modal">
+    <form action="" onsubmit="Form.submit(event)">
+      <fieldset>
+        <legend>Nova Transação</legend>
+
+        <label>
+          <input type="text" id="description" placeholder="Descrição">
+          <br>
+          <input type="number" step="0.01" id="value" placeholder="0,00">
+          <small>Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
+        </label>
+        <label>
+          <input type="date" id="date">
+        </label>
+      </fieldset>
+      
+      <div id="buttons">
+        <a href="#" id="cancel">Cancelar</a>
+        <button id="save">Salvar</button>
+      </div>
+    </form>
+
+    <div class="error">
+      <h2>Preencha todos os campos</h2>
+    </div>
+  </aside>
   <footer>dev.finance$</footer>
+
+
+
+  <script src="scripts.js"></script>
 </body>
 </html>
